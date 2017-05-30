@@ -75,6 +75,12 @@ $(document).ready(function($) {
   $('.navbar-toggle').on('click', function() {
     var sunPositionMove = ($('.sun').position().left + 250) + 'px';
     var sunPositionBack = ($('.sun').position().left - 250) + 'px';
+    var cloud1PositionMove = ($('.cloud1').position().left + 250) + 'px';
+    var cloud2PositionMove = ($('.cloud2').position().left + 250) + 'px';
+    var cloud3PositionMove = ($('.cloud3').position().left + 250) + 'px';
+    var cloud1PositionBack = ($('.cloud1').position().left - 250) + 'px';
+    var cloud2PositionBack = ($('.cloud2').position().left - 250) + 'px';
+    var cloud3PositionBack = ($('.cloud3').position().left - 250) + 'px';
     if ($('.sidenav').hasClass('menu-hidden')) {
       $('.sidenav').toggleClass('menu-show menu-hidden');
       $('.navbar-toggle').toggleClass('collapsed');
@@ -94,6 +100,18 @@ $(document).ready(function($) {
         'transition': 'left 1s ease',
         'left': sunPositionMove
       });
+      $('.cloud1').css({
+        //'transition': 'left 1s ease',
+        'left': cloud1PositionMove
+      });
+      $('.cloud2').css({
+        //'transition': 'right 1s ease',
+        'left': cloud2PositionMove
+      });
+      $('.cloud3').css({
+        //'transition': 'right 1s ease',
+        'left': cloud3PositionMove
+      });
     } else {
       $('.sidenav').toggleClass('menu-show menu-hidden');
       $('.navbar-toggle').toggleClass('collapsed');
@@ -101,8 +119,20 @@ $(document).ready(function($) {
       $('.site-wrap').css('left', '0px');
       $('.navbar-toggle').css('left', '15px');
       $('.sun').css({
-        'transition': 'left 1s ease',
+        //'transition': 'left 1s ease',
         'left': sunPositionBack
+      });
+      $('.cloud1').css({
+        //'transition': 'left 1s ease',
+        'left': cloud1PositionBack
+      });
+      $('.cloud2').css({
+        //'transition': 'left 1s ease',
+        'left': cloud2PositionBack
+      });
+      $('.cloud3').css({
+        //'transition': 'left 1s ease',
+        'left': cloud3PositionBack
       });
     }
   });

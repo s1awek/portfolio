@@ -9,7 +9,7 @@
 @font-size-base: 15px;
 body,
 html {
-    background-color: #141926;
+    background-color: @bg;
     font-family: 'Source Sans Pro', Lato, Tahoma, sans-serif;
 }
 
@@ -504,7 +504,7 @@ body {
     transition: border-color 2s;
     &:hover {
       border: 1px solid @lightText;
-        color: #fff;
+        color: @lightest;
     }
 }
 
@@ -519,7 +519,7 @@ body {
 }
 
 .pen-name {
-    color: #fff;
+    color: @lightest;
     font-size: 1.2rem;
     text-transform: none;
     letter-spacing: 0;
@@ -567,7 +567,7 @@ body {
 }
 
 .row-canvas {
-  background: #141926;
+  background: @bg;
   position: relative;
 }
 
@@ -577,7 +577,7 @@ input[type="text"], input[type="password"], input[type="email"],  {
 	width: 100%;
 	padding: 0 1em;
 	text-decoration: none;
-	color: #fff;
+	color: @lightest;
 	border: none;
 	border-radius: 0;
 	outline: 0;
@@ -607,7 +607,7 @@ select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 	letter-spacing: .025em;
-	color: #fff;
+	color: @lightest;
 	font-size: 17pt;
 	font-weight: 300;
 	line-height: 1.65em;
@@ -643,7 +643,7 @@ form {
 }
 input[type="submit"].special, input[type="reset"].special, nput[type="button"].special, button.special {
 	color: #242943;
-	background-color: #fff;
+	background-color: @lightest;
 	box-shadow: none;
 	&:hover {
 		color: #242943;
@@ -687,11 +687,11 @@ input[type="submit"], input[type="reset"], input[type="button"], .button, button
 	text-decoration: none;
 	letter-spacing: .25em;
 	text-transform: uppercase;
-	color: #fff;
+	color: @lightest;
 	border: 0;
 	border-radius: 0;
 	background-color: transparent;
-	box-shadow: inset 0 0 0 2px #fff;
+	box-shadow: inset 0 0 0 2px @lightest;
 	font-size: 1em;
 	font-weight: 600;
 	line-height: 3.5em;
@@ -703,7 +703,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button, button
 
 input {
 	letter-spacing: .025em;
-	color: #fff;
+	color: @lightest;
 	font-size: 19px;
 	font-weight: 300;
 	line-height: 1.65em;
@@ -713,16 +713,25 @@ label {
 	margin: 0 0 1em 0;
 	letter-spacing: .25em;
 	text-transform: uppercase;
-	color: #fff;
+	color: @lightest;
 	font-size: 1em;
 	font-weight: 600;
 }
 ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, ::placeholder {
 	opacity: 1.0;
-	color: rgba(244, 244, 255, 0.2);
+	color: @bgLight;
 }
 .my-skills-container {
+
+  background: transparent;
   //margin-top: -120px;
+}
+
+.my-skills-section {
+  padding-bottom: 35px;
+  background: @bg;
+  z-index: 30;
+  position: relative;
 }
 
 .my-skills-content, .bio {
@@ -735,14 +744,14 @@ label {
 }
 
 a {
-  color: #fff;
+  color: @lightest;
   font-weight: bold;
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted @lightest;
   text-decoration: none;
-  &:hover, &:active, &:focus {
-    color: #fff;
+  &:hover, &:active, &:focus, &:visited {
+    color: @lightest;
     text-decoration: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid @lightest;
   }
 }
 
@@ -765,7 +774,7 @@ a {
 }
 
 .cloud1-vissible {
-  opacity: 1;
+  opacity: 0.95;
   left: 25%;
 }
 
@@ -773,32 +782,83 @@ a {
   opacity: 0;
   position: fixed;
   top: 20vw;
-  right: 0;
+  left: 100%;
   width: 20vw;
   height: auto;
   transition: all 2s ease-in;
 }
 
 .cloud2-vissible {
-  opacity: 1;
-  right: 40%;
+  opacity: 0.95;
+  left: 40%;
 }
 
 .cloud3 {
   opacity: 0;
   position: fixed;
   top: 10vw;
-  right: 0;
+  left: 100%;
   width: 10vw;
   height: auto;
   transition: all 2s ease-in;
 }
 
 .cloud3-vissible {
-  opacity: 1;
-  right: 45%;
+  opacity: 0.95;
+  left: 45%;
 }
 
 .projects-header {
   z-index: 10;
+}
+
+footer{
+  padding: 50px 0;
+  background-color: @bg;
+  border-top: 1px solid @bgLight;
+  position: relative;
+}
+
+.icons{
+  list-style: none;
+  padding: 0;
+  li{
+    float: left;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    a {
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-bottom: none;
+      width: 50px;
+      height: 50px;
+      .border-radius(50%);
+      color: @bg;
+      background-color: @lightest;
+      &:hover, &:active {
+        color: @lightest;
+        background-color: @bg;
+        border: 2px solid @formHover;
+      }
+      i{
+        font-size: 2em;
+      }
+    }
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.copyright{
+  list-style: none;
+  padding:0;
+  li{
+    color: @bgLight;
+    font-size: 1em;
+    letter-spacing: .025em;
+  }
 }

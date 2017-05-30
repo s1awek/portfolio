@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
     body {
       padding-bottom: 20px;
@@ -65,7 +66,7 @@
             </div>
             <div class="col-md-8 bio-container">
               <p class="bio">Hi, my name is Slawek and for about last decade I worked as a setter and programmer at CNC numerically controlled machines. However, my passion and hobby has always been programming and web development. For this reason, I decided to fnish FreeCodeCamp front end developer course and start career as a web developer. Better late than never ;)</p>
-              <p class="bio">Scroll down to see may latest projects.</p>
+              <p class="bio">Scroll down to see my latest projects.</p>
             </div>
           </div>
         </div>
@@ -404,7 +405,7 @@
 
       </div>
     </section>
-    <section>
+    <section class="my-skills-section">
 
       <div class="container my-skills-container">
 
@@ -416,7 +417,8 @@
             </div>
             <p class="my-skills-content">
               Here are my skills at the time of creating this portfolio. Of course I'm not an expert in either, but I'm still learning and gaining new knowledge. I just love to learn new stuff.</p>
-            <p class="my-skills-content">If you would like to hire me, please use the contact form and I will provide you with all the necessary information, including my current CV. You can also drop a line directly to my email: <a href="mailto:slawomir.kasprzak78@gmail.com" class="email">slawomir.kasprzak78@gmail.com</a></p>
+            <p class="my-skills-content">If you would like to hire me, please use the contact form and I will provide you with all the necessary information, including my current CV. You can also drop a line directly to my email:<br />
+              <a href="mailto:slawomir.kasprzak78@gmail.com" class="email"><i class="fa fa-envelope"> </i> slawomir.kasprzak78@gmail.com</a></p>
             <div id="myCanvasContainer">
               <canvas id="myCanvas" width="922" height="400">
               <p>Your browser is too old, please upgrade.</p>
@@ -490,16 +492,27 @@
         </div>
       </div>
     </section>
-    <section>
+    <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-
+          <div class="col-xs-12">
+            <div class="inner-footer">
+              <ul class="icons clearfix">
+                <li><a href="https://www.linkedin.com/in/s%C5%82awek-k-85aa91117/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/s1awek" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.freecodecamp.com/s1awek" target="_blank"><i class="fa fa-fire"></i></a></li>
+                <li><a href="https://stackoverflow.com/users/1722851/s1awek" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+                <li><a href="https://unsplash.com/@s1awek" target="_blank"><i class="fa fa-camera"></i></a></li>
+                <li><a href="https://codepen.io/S1awek/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+              </ul>
+              <ul class="copyright">
+                <li>Sourcecode of this portfolio can be seen here: <a href="https://github.com/s1awek/portfolio" target="_blank">Portfolio</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4"></div>
         </div>
       </div>
-    </section>
+    </footer>
   </div>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script>
@@ -508,24 +521,16 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
-
-  whenInViewport.min.js
-  <!-- <script src="js/decomp.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.1/svg.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
-  <script src="js/pathseg.js"></script>
-  <script src="js/matter_script.js"></script> -->
   <script src="js/vendor/bootstrap.min.js"></script>
   <script src="http://www.goat1000.com/jquery.tagcanvas.min.js?2.9"></script>
-  <script src="js/typed.js"></script>
   <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
-  <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
   <!-- typed.js below -->
+  <script src="js/typed.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       Typed.new('.typed-text', {
-        strings: ["jsconsole -s\nvar aboutMe = {\n name: 'Slawek Kasprzak',\n selfManaged: true,\n commited: true,\n reliable: true,\n hardWorking: true,\n passionate: true\n\};\n\nvar mySkills = ['JavaScript', 'HTML',\n 'CSS', 'jQuery', 'Bootstrap',\n 'Photoshop', 'WordPress', 'Linux', 'SCSS'\n 'LESS', 'GIT', 'MoreToCome'];\n\nexit\n\n<span class='console-start'>user@portfolio </span><span class='console-symbol'>~ $ </span>"],
+        strings: ["jsconsole -s\nvar aboutMe = {\n name: 'Slawek',\n selfManaged: true,\n commited: true,\n reliable: true,\n hardWorking: true,\n passionate: true\n\};\n\nvar mySkills = ['JavaScript', 'HTML',\n 'CSS', 'jQuery', 'Bootstrap',\n 'Photoshop', 'WordPress', 'Linux', 'SCSS'\n 'LESS', 'GIT', 'MoreToCome'];\n\nexit\n\n<span class='console-start'>user@portfolio </span><span class='console-symbol'>~ $ </span>"],
         contentType: 'html',
         showCursor: true,
         cursorChar: "|",
