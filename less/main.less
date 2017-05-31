@@ -42,26 +42,18 @@ body {
 
 
 /* The side navigation menu */
-
 .sidenav {
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 10;
-    /* Stay on top */
     top: 0;
     left: 0;
-    /* Black*/
     overflow-x: hidden;
-    /* 100% Full-height */
     width: 0;
     height: 100%;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
+    padding-top: 100px;
     transition: 0.5s;
     background-color: #111;
-    /* 0.5 second transition effect to slide in the sidenav */
+
 }
 
 
@@ -72,20 +64,13 @@ body {
     padding: 8px 8px 8px 32px;
     transition: 0.3s;
     text-decoration: none;
-    color: #818181;
+    color: @lightText;
     font-size: 25px;
-    width: 100%; //text-align: center;
+    width: 100%;
     &:hover {
-        color: @darkText !important;
+        color: @darkText;
+        border-bottom: 1px @lightest dotted;
     }
-}
-
-
-/* When you mouse over the navigation links, change their color */
-
-.offcanvas a:focus,
-.sidenav a:hover {
-    color: #f1f1f1;
 }
 
 .sidenav ul {
@@ -96,9 +81,7 @@ body {
     width: 100%;
 }
 
-
 /* Position and style the close button (top right corner) */
-
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -106,18 +89,7 @@ body {
     margin-left: 50px;
     font-size: 36px;
 }
-
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-#main {
-    padding: 20px;
-    transition: margin-left 0.5s;
-}
-
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
 @media screen and (max-height: 450px) {
     .sidenav {
         padding: 15px 0 0 0;
@@ -138,7 +110,7 @@ body {
 //https://julienmelissas.com/animated-x-icon-for-the-bootstrap-navbar-toggle/
 //**********************************************************************
 .navbar-toggle {
-    z-index: 15;
+    z-index: 31;
     overflow: hidden;
     width: 42px;
     padding-left: 7px;
@@ -221,13 +193,12 @@ body {
 }
 
 .bio-container {
-
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .console-top{
-  min-height: 350px;
+  height: 350px;
 }
 
 .console {
@@ -343,12 +314,12 @@ body {
 }
 
 //bg images
-.img-bg {
+.img-bg1 {
     display: none;
 }
 
-.img-bg,
-.img-stroke {
+.img-bg1,
+.img-bg2 {
     position: fixed;
     top: 0;
     right: 0;
@@ -359,6 +330,7 @@ body {
 }
 
 //projects
+// Background animation effect
 .projects {
     overflow: hidden;
     width: 100%;
@@ -413,7 +385,7 @@ body {
 }
 
 .img-transition {
-  z-index: 9;
+    z-index: 9;
     position: absolute;
     top: -2px;
     right: 0;
@@ -427,6 +399,7 @@ body {
   width: 101%;
 }
 
+// To wrap and break lines in description in fake console
 .dsc {
     display: table;
     white-space: pre-wrap;
@@ -445,6 +418,7 @@ body {
     margin: 60px 0;
 }
 
+// To fake codepen image overlay
 .img-wrapper {
     position: relative;
     overflow: hidden;
@@ -552,7 +526,7 @@ body {
 @media screen and (max-width: 992px) {
   .arrow {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
   }
 }
 .website-site {
@@ -641,7 +615,7 @@ form {
 		margin: 2.5em 0 0 0;
 	}
 }
-input[type="submit"].special, input[type="reset"].special, nput[type="button"].special, button.special {
+input[type="submit"].special {
 	color: #242943;
 	background-color: @lightest;
 	box-shadow: none;
@@ -722,9 +696,7 @@ label {
 	color: @bgLight;
 }
 .my-skills-container {
-
   background: transparent;
-  //margin-top: -120px;
 }
 
 .my-skills-section {
@@ -751,7 +723,7 @@ a {
   &:hover, &:active, &:focus, &:visited {
     color: @lightest;
     text-decoration: none;
-    border-bottom: 1px solid @lightest;
+    border-bottom: none;
   }
 }
 

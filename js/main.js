@@ -3,18 +3,12 @@
 
 $(document).ready(function($) {
   'use strict';
-  // Toggle .collapsed class for animation of burger icon
-  // $('.navbar-toggle').on('click', function() {
-  //   $(this).toggleClass('collapsed');
-  // });
-
-  // Control SVG animoation at ABOUT_ME section
+  console.log('%c Hi, let me know if you found anything interesting here ( ͡° ͜ʖ ͡° )', 'background: #222; color: #bada55; padding: 5px');
+  // Control SVG animation at ABOUT_ME section
   setTimeout(function() {
-    $('.img-bg').fadeIn(3000);
-    $('.img-stroke').fadeOut(3000);
+    $('.img-bg1').fadeIn(3000);
+    $('.img-bg2').fadeOut(3000);
   }, 3000);
-
-  $('.img-stroke').attr('src', 'img/abc_gwiazdy.svg?' + Math.random()); // append random query string to animated SVG to prevent browser caching and skipping animation.
 
   // idea of determine scroll direction taken from:
   // http://stackoverflow.com/questions/4326845/how-can-i-determine-the-direction-of-a-jquery-scroll-event
@@ -24,22 +18,23 @@ $(document).ready(function($) {
     var st = $(this).scrollTop();
     if (st > lastScrollTop) { // if scroll down
       $('#projects-bg').addClass('projects');
-      $('.img-bg').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
-      $('.img-stroke').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
-      $('.sun').css('top', '+' + Math.floor($(window).scrollTop() * 0.04) + 'px');
+      $('.img-bg1').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
+      $('.img-bg2').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
+      $('.sun').css('top', Math.floor($(window).scrollTop()) * 0.04) + 'px';
+
     } else { // if scroll up
-      $('.img-bg').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
-      $('.img-stroke').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
-      $('.sun').css('top', '+' + Math.floor($(window).scrollTop() * 0.04) + 'px');
+      $('.img-bg1').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
+      $('.img-bg2').css('top', '-' + Math.floor($(window).scrollTop() * scrollSpeed) + 'px');
+      $('.sun').css('top', Math.floor($(window).scrollTop()) * 0.04) + 'px';
     }
     lastScrollTop = st;
   });
   // oppening and closing fake console
   $('.ui-x').click(function() {
-    $('.console').css('display', 'none');
+    $(this).parent().parent().css('display', 'none');
   });
   $('.ui-up').click(function() {
-    $('.console').css({
+    $(this).parent().parent().css({
       'height': '20px',
       'resize': 'none',
       'overflow': 'hidden',
@@ -47,7 +42,7 @@ $(document).ready(function($) {
     });
   });
   $('.ui-down').click(function() {
-    $('.console').css({
+    $(this).parent().parent().css({
       'height': '340px',
       'resize': 'both',
       'overflow': 'auto',
@@ -71,7 +66,8 @@ $(document).ready(function($) {
   });
 
   $('.console-wrapper, .img-wrapper', '.sun').AniView();
-
+  // When menu is open move all images to the right by 250px
+  // When it's closed move it back
   $('.navbar-toggle').on('click', function() {
     var sunPositionMove = ($('.sun').position().left + 250) + 'px';
     var sunPositionBack = ($('.sun').position().left - 250) + 'px';
@@ -136,7 +132,8 @@ $(document).ready(function($) {
       });
     }
   });
-
+  // Canvas for skills cloud with parameters
+  // http://www.goat1000.com/tagcanvas-examples.php
   if (!$('#myCanvas').tagcanvas({
       textColour: '#fff',
       outlineColour: 'transparent',
@@ -153,8 +150,8 @@ $(document).ready(function($) {
     // something went wrong, hide the canvas container
     $('#myCanvasContainer').hide();
   }
+  // Show and hide clouds when scrolling using waypoints.js
   $('.cloud1-trigger').waypoint(function(direction) {
-    console.log(direction);
     if (direction === 'down') {
       $('.cloud1').addClass('cloud1-vissible');
     } else {
@@ -176,5 +173,10 @@ $(document).ready(function($) {
     } else {
       $('.cloud3').removeClass('cloud3-vissible');
     }
+  });
+  // Add class .active to current menu position
+  $(".nav a").on("click", function() {
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
   });
 });

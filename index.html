@@ -1,24 +1,20 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
   <title>Slawek's Portfolio</title>
-  <meta name="description" content="">
+  <meta name="description" content="Portfolio">
   <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;subset=latin-ext" rel="stylesheet">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <style>
     body {
       padding-bottom: 20px;
     }
   </style>
-  <!-- <link rel="stylesheet" href="css/jasny-bootstrap.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -29,25 +25,19 @@
     <span class="icon-bar middle-bar"></span>
     <span class="icon-bar bottom-bar"></span>
   </button>
-  <nav class="sidenav menu-hidden" role="navigation">
-    <a class="navmenu-brand" href="#">Portfolio</a>
+  <nav class="sidenav menu-hidden">
     <ul class="navigation nav navbar-nav">
-      <li><a href="#">AboutMe</a></li>
-      <li class="active"><a href="#">MySkills</a></li>
-      <li><a href="#">MyProjects </a></li>
-      <li><a href="#">ContactMe</a></li>
+      <li><a href="#about">ABOUT_ME</a></li>
+      <li><a href="#projects">MY_PROJECTS</a></li>
+      <li><a href="#skills">MY_SKILLS</a></li>
+      <li><a href="#contact">CONTACT_ME</a></li>
     </ul>
   </nav>
   <div class="site-wrap">
     <section>
-
-      <div class="container-fluid about-me">
-        <img src="img/abc.svg" class="img-bg" />
-        <img src="" class="img-stroke" />
-        <!--
-            Animated SVG thanks to https://maxwellito.github.io/vivus/
-            https://maxwellito.github.io/vivus-instant/
-        -->
+      <div class="container-fluid about-me" id="about">
+        <img src="img/bg1.svg" class="img-bg1" alt="background-image" />
+        <img src="img/bg2.svg" class="img-bg2" alt="background-image" />
         <div class="container">
           <div class="page-header">
             <h1>ABOUT_ME</h1>
@@ -71,7 +61,6 @@
           </div>
         </div>
       </div>
-      <!-- /.about-me -->
     </section>
     <div class="container-fluid cont-transition"><img src="img/transition.svg" alt="background" class="img-transition"></div>
     <section>
@@ -81,7 +70,7 @@
         <img src="img/cloud2.svg" alt="cloud2" class="cloud2">
         <img src="img/cloud3.svg" alt="cloud3" class="cloud3">
         <div id="projects-bg">
-          <div class="container">
+          <div class="container" id="projects">
             <div class="page-header projects-header">
               <h1>MY_PROJECTS</h1>
             </div>
@@ -98,22 +87,18 @@
                 </div>
                 <img src="img/arrow.svg" alt="arrow" class="arrow">
               </div>
-
               <div class="col-md-8">
                 <div class="img-wrapper" data-av-animation="slideInLeft">
                   <img src="img/CodePen-Twitch.tvstreamchecker-FreeCodeCamp.jpg" alt="Twitch.tv App" class="img-responsive" />
                   <div class="background-overlay">
                     <a href="https://codepen.io/S1awek/pen/rWxgBQ" class="website" target="_blank">
-
                       <div class="pen-wrap">
-
                         <img src="img/codepen-logo.svg" alt="Codepen Logo" width="45" height="45">
                         <h1 class="pen-title">Twitch.tv stream checker - FreeCodeCamp
                         </h1>
                         <div class="by">A Pen By <span class="pen-name">S1awek</span>
                         </div>
                       </div>
-
                     </a>
                   </div>
                 </div>
@@ -323,7 +308,6 @@
               </div>
             </div>
             <div class="row row-projects">
-
               <div class="col-md-4 console-wrapper" data-av-animation="slideInRight">
                 <div class="console console-dsc">
                   <div class="console-top-bar">
@@ -338,10 +322,8 @@
               </div>
               <div class="col-md-8">
                 <div class="img-wrapper" data-av-animation="slideInLeft">
-
                   <img src="img/arcadius-atelier.com_s1awek_portfolio.png" alt="Arcadius Atelier screenshot" class="img-responsive" />
                   <div class="background-overlay">
-
                     <a href="https://arcadius-atelier.com" class="website-site" target="_blank">
                       <img src="img/external.svg" alt="external link" width="45" height="45" class="external-link-icon">
                     </a>
@@ -372,7 +354,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="row row-projects">
               <div class="col-md-4 console-wrapper" data-av-animation="slideInRight">
@@ -398,71 +379,66 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="container-fluid cont-transition"><img src="img/transition_bottom.svg" alt="background" class="img-transition-bottom"></div>
         </div>
-
       </div>
     </section>
     <section class="my-skills-section">
-
       <div class="container my-skills-container">
-
         <div class="row row-canvas">
-
-          <div class="col-md-6">
+          <div class="col-md-6" id="skills">
             <div class="page-header">
               <h1>MY_SKILLS</h1>
             </div>
             <p class="my-skills-content">
-              Here are my skills at the time of creating this portfolio. Of course I'm not an expert in either, but I'm still learning and gaining new knowledge. I just love to learn new stuff.</p>
+              Here are my skills at the time of creating this portfolio in nice, graphical form. Of course I'm not an expert in either, but I'm still learning and gaining new knowledge. I just love to learn new stuff.</p>
             <p class="my-skills-content">If you would like to hire me, please use the contact form and I will provide you with all the necessary information, including my current CV. You can also drop a line directly to my email:<br />
-              <a href="mailto:slawomir.kasprzak78@gmail.com" class="email"><i class="fa fa-envelope"> </i> slawomir.kasprzak78@gmail.com</a></p>
+              <a href="mailto:slawomir.kasprzak78@gmail.com" class="email"><i class="fa fa-envelope"></i> slawomir.kasprzak78@gmail.com</a></p>
             <div id="myCanvasContainer">
               <canvas id="myCanvas" width="922" height="400">
-              <p>Your browser is too old, please upgrade.</p>
+              <h1 class="danger">Your browser is too old, please upgrade.</h1>
             </canvas>
             </div>
             <div id="tags" class="tags">
               <ul>
                 <li>
-                  <a href="#"><img src="img/logos/js_logo.png"></a>
+                  <a href="#"><img src="img/logos/js_logo.png" alt="js-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/html_logo.png"></a>
+                  <a href="#"><img src="img/logos/html_logo.png" alt="html-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/wordpress_logo.png"></a>
+                  <a href="#"><img src="img/logos/wordpress_logo.png" alt="wordpress-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/jquery_logo.png"></a>
+                  <a href="#"><img src="img/logos/jquery_logo.png" alt="jquery-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/github_logo.png"></a>
+                  <a href="#"><img src="img/logos/github_logo.png" alt="github-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/bootstrap_logo.png"></a>
+                  <a href="#"><img src="img/logos/bootstrap_logo.png" alt="bootstrap-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/css_logo.png"></a>
+                  <a href="#"><img src="img/logos/css_logo.png" alt="css-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/less_logo.png"></a>
+                  <a href="#"><img src="img/logos/less_logo.png" alt="less-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/linux_logo.png"></a>
+                  <a href="#"><img src="img/logos/linux_logo.png" alt="linux-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/photoshop_logo.png"></a>
+                  <a href="#"><img src="img/logos/photoshop_logo.png" alt="photoshop-logo"></a>
                 </li>
                 <li>
-                  <a href="#"><img src="img/logos/sass_logo.png"></a>
+                  <a href="#"><img src="img/logos/sass_logo.png" alt="sass-logo"></a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" id="contact">
             <div class="page-header">
               <h1>CONTACT_ME</h1>
             </div>
@@ -483,7 +459,6 @@
                 <div class="help-block with-errors"></div>
               </div>
               <ul class="actions">
-                <input type="hidden" name="_next" value="#" />
                 <li><input type="submit" value="Send Message" class="special"></li>
                 <li><input type="reset" value="Clear"></li>
               </ul>
@@ -506,7 +481,7 @@
                 <li><a href="https://codepen.io/S1awek/" target="_blank"><i class="fa fa-codepen"></i></a></li>
               </ul>
               <ul class="copyright">
-                <li>Sourcecode of this portfolio can be seen here: <a href="https://github.com/s1awek/portfolio" target="_blank">Portfolio</a></li>
+                <li>Source code of this portfolio can be found <a href="https://github.com/s1awek/portfolio" target="_blank">here</a></li>
               </ul>
             </div>
           </div>
@@ -514,23 +489,23 @@
       </div>
     </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/vendor/jquery-2.2.4.min.js"></script>
   <script>
     /*jslint browser:true */
     window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>');
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+  <script src="js/jquery.lettering.min.js"></script>
+  <script src="js/jquery.textillate.min.js"></script>
   <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="http://www.goat1000.com/jquery.tagcanvas.min.js?2.9"></script>
-  <script src="https://unpkg.com/jquery-aniview/dist/jquery.aniview.js"></script>
+  <script src="js/jquery.tagcanvas.min.js"></script>
+  <script src="js/jquery.aniview.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <!-- typed.js below -->
   <script src="js/typed.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       Typed.new('.typed-text', {
-        strings: ["jsconsole -s\nvar aboutMe = {\n name: 'Slawek',\n selfManaged: true,\n commited: true,\n reliable: true,\n hardWorking: true,\n passionate: true\n\};\n\nvar mySkills = ['JavaScript', 'HTML',\n 'CSS', 'jQuery', 'Bootstrap',\n 'Photoshop', 'WordPress', 'Linux', 'SCSS'\n 'LESS', 'GIT', 'MoreToCome'];\n\nexit\n\n<span class='console-start'>user@portfolio </span><span class='console-symbol'>~ $ </span>"],
+        strings: ["jsconsole -s\nvar aboutMe = {\n name: 'Slawek',\n selfManaged: true,\n commited: true,\n reliable: true,\n hardWorking: true,\n passionate: true\n\};\n\nvar mySkills = ['JavaScript', 'HTML',\n 'CSS', 'jQuery', 'Bootstrap',\n 'Photoshop', 'WordPress', 'Linux', 'SCSS'\n 'LESS', 'GIT', 'MoreToCome'];\nexit\n\n<span class='console-start'>user@portfolio </span><span class='console-symbol'>~ $ </span>"],
         contentType: 'html',
         showCursor: true,
         cursorChar: "|",
