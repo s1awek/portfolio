@@ -6,6 +6,7 @@ $(document).ready(function($) {
   console.log('%c Hi, let me know if you found anything interesting here ( ͡° ͜ʖ ͡° )', 'background: #222; color: #bada55; padding: 5px');
   // Control SVG animation at ABOUT_ME section
   setTimeout(function() {
+    $('.bio-container').fadeIn(3000);
     $('.img-bg1').fadeIn(3000);
     $('.img-bg2').fadeOut(3000);
   }, 3000);
@@ -65,18 +66,16 @@ $(document).ready(function($) {
     type: 'char'
   });
 
-  $('.console-wrapper, .img-wrapper', '.sun').AniView();
+  $('.img-wrapper').AniView();
+  $('.console-wrapper').AniView();
   // When menu is open move all images to the right by 250px
   // When it's closed move it back
   $('.navbar-toggle').on('click', function() {
+    console.log($('.cloud3').position());
     var sunPositionMove = ($('.sun').position().left + 250) + 'px';
-    var sunPositionBack = ($('.sun').position().left - 250) + 'px';
     var cloud1PositionMove = ($('.cloud1').position().left + 250) + 'px';
     var cloud2PositionMove = ($('.cloud2').position().left + 250) + 'px';
     var cloud3PositionMove = ($('.cloud3').position().left + 250) + 'px';
-    var cloud1PositionBack = ($('.cloud1').position().left - 250) + 'px';
-    var cloud2PositionBack = ($('.cloud2').position().left - 250) + 'px';
-    var cloud3PositionBack = ($('.cloud3').position().left - 250) + 'px';
     if ($('.sidenav').hasClass('menu-hidden')) {
       $('.sidenav').toggleClass('menu-show menu-hidden');
       $('.navbar-toggle').toggleClass('collapsed');
@@ -116,19 +115,19 @@ $(document).ready(function($) {
       $('.navbar-toggle').css('left', '15px');
       $('.sun').css({
         //'transition': 'left 1s ease',
-        'left': sunPositionBack
+        'left': ''
       });
       $('.cloud1').css({
         //'transition': 'left 1s ease',
-        'left': cloud1PositionBack
+        'left': ''
       });
       $('.cloud2').css({
         //'transition': 'left 1s ease',
-        'left': cloud2PositionBack
+        'left': ''
       });
       $('.cloud3').css({
         //'transition': 'left 1s ease',
-        'left': cloud3PositionBack
+        'left': ''
       });
     }
   });
@@ -179,4 +178,29 @@ $(document).ready(function($) {
     $(".nav").find(".active").removeClass("active");
     $(this).parent().addClass("active");
   });
+
+  // Add smooth scrolling to all links
+  // Idea taken from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function() {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
 });
